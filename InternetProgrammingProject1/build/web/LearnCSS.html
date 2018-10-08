@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            html, body {
+                height:100%;
+                width:100%
+                    
+            }
+            
+            input{
+                border:white;
+                font-style: oblique;
+                color: white;              
+                text-align: center;
+                display: inline-block;
+                font-size:200%;
+                float: left;
+                width:33.33%;
+                height:200%;
+                font-weight:900                             
+            }          
+            .header{
+                font-family:monospace;
+                font-style:italic;                              
+                color: white;  
+                
+            }
+            
+            .div1{
+               
+                margin-left: 22.5%;
+                margin-right: 22.5%;
+                background:black;
+                opacity: 0.88;               
+            }
+            
+            .div2{
+                height: 100%;
+                margin-left: 1%;
+                margin-right: 5%;
+                margin-top: 10%;
+                font-family:monospace;
+                font-style:italic;                              
+                color: white;                   
+            }
+            .p1{
+                margin-left: 5%;
+                margin-right: 5%;
+                font-family:monospace;
+                font-style:italic;                              
+                color: white; 
+            }
+            
+
+        </style>       
+    </head>
+    
+    <body background="htmlPic.jpg">                              
+        <div class="div1">                
+            <div align="center" style="font-size:600%"
+                 class="header">< CSS ></div>
+            <div align="center" style="front-size:300%" 
+                 class="header">"Cascading Style Sheet"</div>                          
+            <div>     
+                <form action="index.html">
+                    <input style="background-color:#09093a" 
+                           type="submit" value="Home Page">
+                </form>
+                <form action="LearnHtml.html">
+                    <input style="background-color:#042807" 
+                           type="submit" value="Learn HTML">
+                </form>
+                <form action="game.html">
+                    <input style="background-color:#091f42" 
+                           type="submit" value="Play Slots">
+                </form>                                              
+            </div> 
+                      
+            <span class="div2" style="font-size: 200%;" id='#CssSyntax'> 
+                CSS Statement Syntax: </span>
+            <p class='p1' >
+                property_name:value; <br>              
+                property name   value <br>
+                font-family     arial <br>
+                color           red, yellow, or color code <br>
+                font-size:      22px, 2em, 150%, 2in <br>
+            </p>
+
+            <span class="div2" style="font-size: 200%;" id='#ThreeLevelsCSS'> 
+                Three Levels: </span>
+            <p class='p1' >
+            1. inline -- place css statements as the value of the style 
+            attribute of a tag <br>
+            2. embedded -- place css statements into selectors and place the
+            selectors into the page as the content of the style tag <br>
+            3. external document -- place css statements into selectors. Place
+            the selectors into an external document with postfix .CSS and link 
+            your page to the doc. by using the href attribute of the style tag
+                
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='#Selectors'> 
+                Three CSS Selectors: </span>
+            <p class='p1' >
+            1. HTML selector: styles the contents of the tags with the given 
+            name <br>
+            syntax: htmlTagNames{scc_Statements} <br>
+            2. Class Selector: it can be applied to the content of a tag if you
+                     place the class name as the value of the class attribute 
+                     <br>
+            3. ID Selector                           
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='#PseudoCSS'> 
+                Pseudo-class selectors:</span>
+            <p class='p1' >
+            :className{css_statements } <br>
+            :hover-- used to style the content of an element the mouse is 
+            hovering over things <br>
+            :active-- used to select and style the active elements. An element 
+            is active if you click on it and hold it <br>
+            :link-- used to style unvisited links <br>            
+            :visited-- used to style links that have been visited <br>
+            :first-child-- select the element that is the first child (in nest)
+            of its parent <br>                           
+            ::first-letter -- selects the first letter of this element <br>
+            ::before -- insert content before the content of the element <br>
+            ::after -- insert content after this element <br>            
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='#GroupSelector'> 
+                Group Several Selectors:</span>
+            <p class='p1' >
+                .headline, .subline{font-size:50px}
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='#DependantSelector'> 
+                Context Dependant Selectors:</span>
+            <p class='p1' >
+                B I{font-size:20pt; color:green;} if B, I then it shares 
+                attributes <br>
+               - the properties will be applied to the I tag as a child of the B
+                  tag
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='#GroupAndDependant'> 
+                Combination of group selectors and content dependant selectors:
+            </span>
+            <p class='p1' >
+                I B, B .test2{font-size:75px;} <br>
+                1.) The property is applied to tag B when it is a child of 
+                an I tag <br>
+                2.) The property is applied to a test2 class tag when it is a 
+                child of B tag <br>
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='#Properties'> 
+                CSS Properties: 
+            </span>
+            <p class='p1' >
+            font property has several values to use: Font size and family are 
+            required <br><br>
+            font-style: normal, italic, oblique <br>
+            font-variant: normal, small caps <br>
+            font-weight: normal, bold, lighter, 100-900 <br>
+            font-size/line-height: <br>
+                absolute length: 75pt or 50px or 2in or 2cm<br>
+                predefined values: normal xx-small x-small small medium large
+                                    x-large xx-large <br>
+                relative length: smaller larger <br>
+                percentage: 75% <br>
+            font-family: arial, times, sans-serif, cursive, fantasy, mono space
+            
+            <br><br>
+            Example:
+            <span style='font-size:12pt; color:red; font-weight: bold;'><code>
+            <br> &lt;DIV style="font-size:12pt; color:red; 
+            font-weight:bold;"&gt; Example of this property &lt;/DIV&gt;
+            </code></span>
+            
+            <br><br>
+            Text Properties: <br><br>
+            line-height <br>
+            text-decoration: underline, over line, line-through, blink<br>
+            text-transform: capitalize, uppercase, lowercase<br>
+            text-align: left, right, center, justify<br>
+            text-indent: length, percentage of the length of the line<br><br>
+            
+            <br>
+            <code>Example:<br> 
+            <span style='text-decoration: underline;text-align:center;'>
+            &lt;DIV style="text-decoration:underline; 
+            text-align:center;"&gt; Example of this property &lt;/DIV&gt;
+            </span></code>
+      
+            <br><br>
+            Color Properties:<br><br>
+            color<br>
+            background-color<br>
+            background-image<br>
+            background-repeat<br>
+            background-position<br>
+            background<br><br>
+            
+            <br>
+            <span style="background-color:blue;
+            background:#01FF01;">
+            <code>Example:<br> &lt;DIV style="background-color:blue;
+            background:#01FF01;"&gt;Example of this property&lt;/DIV&gt;</code>
+            </span>
+
+            <br><br>
+            To define a color, you may use a color name, color code(#FFFFFF)
+            each of which is one of 0, 1, ...., 9, A, B, C, D, E, F : or color
+            object define by rgb(int r, int g, int b) or rgb(percent, percent,
+            percent)
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='HTMLPractice'> 
+               CSS Practice:</span>
+            <p class='p1' >
+                CSS and what it is for: <br>
+                CSS is the acronym of "Cascading Style Sheet" which is used to 
+                style a web page <br><br>
+                
+                General syntax of a CSS Statement: <br>
+                Property:value; <br><br>
+                
+                Three kinds of selectors in CSS: <br>
+                1.) HTML Selector:<br>
+                syntax - HTMLElementName{ cssStatements }<br>
+                2.) Class Selector:<br>
+                syntax - ClassName{ cssStatements } <br>
+                3.) ID Selector:<br>
+                syntax - #IDValue{ cssStatements }<br><br>
+
+                Three levels of CSS:<br>
+                1.) Inline styles: uses the HTML style attribute to declare an 
+                individual style and overrides any other styles related to 
+                element so inline has highest priority<br><br>
+
+                2.) Embedded style sheet: places a CSS document in an HTML 
+                document's head section<br><br>
+
+                3.) External Style Sheet: saves a CSS document in a file with 
+                postfix .css and links is to this page by using the link element
+                in the head section<br><br>
+                <code>
+                Difference between &lt;DIV&gt; and the &lt;SPAN&gt;:<br>
+                both are dummy elements for holding attributes. 
+                &lt;SPAN&gt; is an inline element which does not change line.
+                <br>
+                &lt;DIV&gt; is a block element which changes line before and 
+                after the content of this element<br><br>
+                </code>
+                CSS Pseudo class that renders the content of a div tag in red 
+                color when it is the first child of the parent tag:<br>
+                <code>
+                div:first-child{color:red}
+                </code>
+                <br><br>
+                A list that is nested one such that outer list is an unordered 
+                one with two elements and each of it's items contains an ordered
+                list with two items:<br><br>
+                <code>
+                    &lt;UL&gt;<br>
+                    <span style='margin-left:2%'>&lt;LI&gt;<br> </span>
+                    <span style='margin-left:2%'>
+                        &lt;STRONG&gt;List Number 1&lt;/STRONG&gt;<br></span>
+                    <span style='margin-left:4%'>&lt;OL&gt;<br></span>
+                    <span style='margin-left:6%'>
+                        &lt;LI&gt; Item one in list 1&lt;/LI&gt;<br></span>
+                    <span style='margin-left:6%'>
+                        &lt;LI&gt; Item two in list 1&lt;/LI&gt;<br></span>
+                    <span style='margin-left:4%'>&lt;/OL&gt;<br></span>
+                    <span style='margin-left:2%'>&lt;/LI&gt;<br></span>
+                    
+                    <span style='margin-left:2%'>&lt;LI&gt;<br></span>
+                    <span style='margin-left:2%'>
+                        &lt;STRONG&gt;List Number 2&lt;/STRONG&gt;<br></span>
+                    <span style='margin-left:4%'>&lt;OL&gt;<br></span>
+                    <span style='margin-left:6%'>
+                        &lt;LI&gt; Item one in list 2&lt;/LI&gt;<br></span>
+                    <span style='margin-left:6%'>
+                        &lt;LI&gt; Item two in list 2&lt;/LI&gt;<br></span>
+                    <span style='margin-left:4%'>&lt;/OL&gt;<br></span>
+                    <span style='margin-left:2%'>&lt;/LI&gt;<br></span>
+                    &lt;/UI&gt;<br><br>
+                </code>
+            </p>       
+        </div>          
+    </body>
+</html>

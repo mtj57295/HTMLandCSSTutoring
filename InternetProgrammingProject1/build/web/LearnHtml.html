@@ -12,6 +12,7 @@
             html, body {
                 height:100%;
                 width:100%
+                    
             }
             
             input{
@@ -29,15 +30,33 @@
             .header{
                 font-family:monospace;
                 font-style:italic;                              
-                color: white;    
+                color: white;  
+                
             }
             
             .div1{
-                height: 100%;
+               
                 margin-left: 22.5%;
                 margin-right: 22.5%;
                 background:black;
                 opacity: 0.88;               
+            }
+            
+            .div2{
+                height: 100%;
+                margin-left: 1%;
+                margin-right: 5%;
+                margin-top: 10%;
+                font-family:monospace;
+                font-style:italic;                              
+                color: white;                   
+            }
+            .p1{
+                margin-left: 5%;
+                margin-right: 5%;
+                font-family:monospace;
+                font-style:italic;                              
+                color: white; 
             }
             
 
@@ -45,26 +64,164 @@
     </head>
     
     <body background="htmlPic.jpg">                              
-        <div class='div1'>                
-                <div align="center" style="font-size:600%"
-                     class="header">< HTML ></div>
-                <div align="center" style="front-size:300%" 
-                     class="header">"HyperText Markup Language"</div>                          
-                <div>     
-                    <form action="index.html">
-                        <input style="background-color:#09093a" 
-                               type="submit" value="Home Page">
-                    </form>
-                    <form action="LearnCSS.html">
-                        <input style="background-color:#042807" 
-                               type="submit" value="Learn CSS">
-                    </form>
-                    <form action="PlaySlots.html">
-                        <input style="background-color:#091f42" 
-                               type="submit" value="Play Slots">
-                    </form>
-                </div> 
-     
+        <div class="div1">                
+            <div align="center" style="font-size:600%"
+                 class="header">< HTML ></div>
+            <div align="center" style="front-size:300%" 
+                 class="header">"HyperText Markup Language"</div>                          
+            <div>     
+                <form action="index.html">
+                    <input style="background-color:#09093a" 
+                           type="submit" value="Home Page">
+                </form>
+                <form action="LearnCSS.html">
+                    <input style="background-color:#042807" 
+                           type="submit" value="Learn CSS">
+                </form>
+                <form action="game.html">
+                    <input style="background-color:#091f42" 
+                           type="submit" value="Play Slots">
+                </form>                                              
+            </div> 
+                      
+            <span class="div2" style="font-size: 200%;" id='htmlTags'> 
+                HTML Tags: </span>
+            <p class='p1' >
+                <code>  
+                    <br>
+                    &lt;p&gt;
+                    <br>
+                    &lt;strong&gt;
+                    <br>
+                    &lt;h1&gt;
+                    <br>
+                    &lt;b&gt;
+                    <br>
+                    &lt;i&gt;
+                    <br>
+                    &lt;center&gt;
+                    <br>
+                    &lt;div&gt; - is a block tag
+                    <br>
+                    &lt;span&gt; - is a inline tag, span and div are both are 
+                    dummy tags for holding attributes
+                    <br>
+                    &lt;br&gt;
+                    <br>      
+                    &lt;A&gt; ... &lt;/A&gt;
+                    <br>
+                </code>
+            </p>
+
+            <span class="div2" style="font-size: 200%;" id='specialChar'> 
+                Special Characters: </span>
+            <p class='p1' >
+                @ & section symbol &sect copy symbol &copy <br>
+                / < , > " , '
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='list'> 
+                Lists: </span>
+            <p class='p1' >
+                ordered list: list items are numbered <br>
+                unordered list: list items are bulleted <br>
+                definition list: each list items has term in front of it <br>
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='internallink'> 
+                ID attribute and internal point link: </span>
+            <p class='p1' >
+                - the ID attribute can be used in any tag to define a point. 
+                The value of the ID attribute of a tag must be unique. <br>
+                 - You may use an anchor tag to link a point in page to another 
+                point to a page 
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='MetaElements'> 
+                Meta Elements are used to maximize the finability of the page:
+            </span>
+            <p class='p1' >
+                attributes: <br>
+                    name: identifies the type of the meta elements <br>
+                        value you may be keywords , description <br>
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='InputElements'> 
+                Forms and INPUT elements:</span>
+            <p class='p1' >
+                An INPUT element allows the viewer to enter data into the 
+                page and a form connects the user to a server
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='FromTag'> 
+                A FROM tag has two attributes:</span>
+            <p class='p1' >
+                action -- its value specifies the url of the server where <br>
+                the data is sent to
+                method -- its value can either be GET and POST<br>
+           When the GET method is used, the data is appended to the url and sent
+                to the server.
+           When POST method is used , the data in the form is packaged in a file
+                and sent to the server
+    
+           <span class="div2" style="font-size: 200%;" id='InputElements'> 
+                INPUT Elements:</span>
+            <p class='p1' >
+            Possible attributes: <br>
+            type -- its value specifies what type this element is. Possible
+            values can be: <br>
+            text -- textfield<br>
+            hidden -- a textfield with the data hidden<br>
+            password <br>
+            submit -- a button that sends the data in this form is
+            sent to the server when it is clicked<br>
+            reset -- a button is displayed and the data in this form
+            is set back to the default values <br>
+            check box<br>
+            radio<br>
+            button<br>
+            name -- it's value is used to identify this element by the server<br>
+            value -- it's value is the default data in this inout element <br>
+            size <br>
+            checked <br>
+            </p>
+            
+            <span class="div2" style="font-size: 200%;" id='HTMLPractice'> 
+               HTML Practice:</span>
+            <p class='p1' >
+                HTML is the acronym of Hyper Text Markup Language, which is a 
+                language for specifying the content and structure of a web page
+                <br><br>
+                In HTML5, the beginning of an HTML document should be: <br>
+                <code> &lt;!DOCTYPE HTML&gt; </code> <br><br>
+                
+                Four Elements in the head: <br>
+                <code>
+                &lt;TITLE&gt;: gives a title and maximizes the find-ability of 
+                the page by search engines <br>
+
+                &lt;STYLE&gt;: defines an internal CSS sheet <br>
+
+                &lt;LINK&gt;: links this page with an external CSS document <br>
+
+                &lt;META&gt;: gives information about this page so it maximizes 
+                it's find-ability by search engines <br>
+                    
+                </code>
+                <br><br>
+                Making an Internal link of a web page: <br>
+                Create a point by giving a value to the id attribute in an 
+                element <br><br>
+                <code>&lt;P id="top" &gt; Home &lt;/P&gt;</code> <br>
+                Use an anchor and it's href attribute to reference this point
+                <br><br>
+                <code>&lt;A href='#top'&gt;Click to go back to home&lt;/A&gt;
+                </code>
+                
+                
+            </p>
+            
+            
         </div>           
 
     </body>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html, body {
+                height:100%;
+                width:100%
+            }
+            
+            input{
+                border:white;
+                font-style: oblique;
+                color: white;              
+                text-align: center;
+                display: inline-block;
+                font-size:200%;
+                float: left;
+                width:33.33%;
+                height:200%;
+                font-weight:900                             
+            }          
+            .header{
+                font-family:monospace;
+                font-style:italic;                              
+                color: white;    
+                font-size:700%;  
+            }
+            
+            .div1{
+                height: 100%;
+                margin-left: 22.5%;
+                margin-right: 22.5%;
+                background:blue;
+                opacity: 0.88;               
+            }
+            .border{
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top:10%;
+                border-style:groove;
+                border-color: red;
+                border-width: 10pt;
+                color:white;
+                font-family:arial;
+                text-align:center;
+                font-size: 200%;
+            }
+            .div3{
+                margin-left: 30%;
+                margin-right: 30%;
+                margin-top:10%;
+                color:black;
+                margin-bottom:5%;
+            }
+            
+            .input1{
+                margin-left: 30%;
+                margin-right: 30%;
+                margin-top:10%;
+                margin-bottom:1%;
+                font-size: 15pt;
+                color:black
+            }
+            .wallet{
+                color:white;
+                font-size: 20pt;
+            }
+            
+            .outputClass{
+                color:white;
+                font-size: 20pt;
+                margin-left:30%;
+            }
+        </style>
+    </head>
+    <body background="Gaming_Slots.jpg"> 
+        <script type='text/javascript'>
+                
+                function checkValid(txt)
+                {
+                    
+                    var rand0 = (Math.floor(Math.random() * 10)).toString(); 
+                    // 0 - 9
+                    var rand1 = (Math.floor(Math.random() * 10)).toString(); 
+                    //// 0 - 9
+                    var rand2 = (Math.floor(Math.random() * 10)).toString(); 
+                    //// 0 - 9 
+                    var r1 = rand0+rand1+rand2;
+                    var r2 = rand0+rand2+rand1;
+                    var r3 = rand2+rand0+rand1;
+                    var r4 = rand2+rand1+rand0;
+                    var r5 = rand1+rand2+rand0;
+                    var r6 = rand1+rand0+rand2;
+                    document.getElementById("rand").innerHTML = r1;
+                    if(txt === r1 || txt === r2 || txt === r3 || txt === r4 || 
+                       txt === r5 || txt === r6)
+                    {      
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    
+                }
+    
+                function play()
+                {
+                    var text = document.getElementById("inputMoney").value; 
+                    var val = parseInt(text);
+                    
+                    var value1 = 
+                        parseInt(document.getElementById("wallet1").innerHTML);
+                    
+                    if(!isNaN(val) && text.length === 3)
+                    {    
+                        if(checkValid(text) === true && value1 !== 0)
+                        {                           
+                            document.getElementById("output").innerHTML = 
+                            "You Won $200";
+                            var total = value1 + 249;
+                            document.getElementById("wallet1").innerHTML = total;
+                        }
+                        else if(checkValid(text) === false && value1 !== 0)
+                        {
+                            document.getElementById("output").innerHTML = 
+                            "You Lost $1";
+                            var total = value1 - 1;
+                            document.getElementById("wallet1").innerHTML = total;
+                        }
+                        else
+                        {
+                            document.getElementById("output").innerHTML = 
+                            "NO More Money Sorry";
+                        }
+                    }
+                    
+                    else
+                    {
+                        document.getElementById("output").innerHTML = 
+                            "Not a number or Not Three Numbers";
+                    }
+                        
+
+                }
+        </script>
+        <div class='div1'>             
+            <div>     
+                <div align="center" class="header">< Slots ></div>
+                <form action="LearnHtml.html">
+                    <input style="background-color:#2d638e" 
+                           type="submit" value="Learn HTML">
+                </form>
+                <form action="LearnCSS.html">
+                    <input style="background-color:#094c19" 
+                           type="submit" value="Learn CSS">
+                </form>
+                <form action="index.html">
+                    <input style="background-color:#421e6d" 
+                           type="submit" value="Home">
+                </form>
+                
+                <div class="border">                    
+                <span class='wallet'>Wallet: $</span>
+                <span id='wallet1' class='wallet'>100</span><br>
+                    <div id='rand' class='div3' style='font-size: 100pt; 
+                    background-color:white;'>
+                        ###
+                    </div>                    
+                    <div style='text-decoration:underline; font-size:30pt'> 
+                        A dollar to Play! 
+                    </div>                                      
+                </div>
+                <input class='input1' id='inputMoney' type='text' 
+                       maxlength='3'/> 
+                <span class='input1' style='color:white'>
+                    Please Type in a three digit integer</span>
+                <br>
+                <button onclick="play()" 
+                        style='margin-left:30%;'>Press to Play</button><br>
+                <span class='outputClass' id='output'>Status</span>
+                
+            </div>  
+            
+            
+        </div>
+    </body>
+</html>
