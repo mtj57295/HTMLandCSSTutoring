@@ -92,25 +92,18 @@ and open the template in the editor.
                     else
                        document.getElementById("inputMoney").value = "";
                 }
-        
                 function checkValid(txt)
-                {
-                    
-                    var rand0 = (Math.floor(Math.random() * 10)).toString(); 
-                    // 0 - 9
-                    var rand1 = (Math.floor(Math.random() * 10)).toString(); 
-                    //// 0 - 9
-                    var rand2 = (Math.floor(Math.random() * 10)).toString(); 
-                    //// 0 - 9 
-                    var r1 = rand0+rand1+rand2;
-                    var r2 = rand0+rand2+rand1;
-                    var r3 = rand2+rand0+rand1;
-                    var r4 = rand2+rand1+rand0;
-                    var r5 = rand1+rand2+rand0;
-                    var r6 = rand1+rand0+rand2;
-                    document.getElementById("rand").innerHTML = r1;
-                    if(txt === r1 || txt === r2 || txt === r3 || txt === r4 || 
-                       txt === r5 || txt === r6)
+                {                   
+                    var rand0 = Math.floor(Math.random() * 10);
+                    var rand1 = Math.floor(Math.random() * 10);
+                    var rand2 = Math.floor(Math.random() * 10);
+                    document.getElementById("rand").innerHTML
+                    =rand0.toString()+rand1.toString()+rand2.toString();
+                    var arr = txt.split("");
+                    var r0 = rand0 + rand1 + rand2;
+                    var r1 = parseInt(arr[0]) + parseInt(arr[1])
+                            + parseInt(arr[2]);                   
+                    if(r1 === r0)
                     {      
                         return true;
                     }
@@ -119,7 +112,6 @@ and open the template in the editor.
                         return false;
                     }                    
                 }
-    
                 function play()
                 {
                     var text = document.getElementById("inputMoney").value; 
@@ -153,8 +145,6 @@ and open the template in the editor.
                         document.getElementById("output").innerHTML = 
                             "NO More Money Sorry";
                     }
-                        
-
                 }
         </script>
         <div class='div1'>             
