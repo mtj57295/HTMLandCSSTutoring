@@ -83,7 +83,16 @@ and open the template in the editor.
     </head>
     <body background="Gaming_Slots.jpg"> 
         <script type='text/javascript'>
-                
+                function onCall()
+                {
+                    var c = document.getElementById("inputMoney").value;
+                    var regex=/^[0-9]+$/;
+                    if(c.match(regex))
+                       document.getElementById("inputMoney").value = c;
+                    else
+                       document.getElementById("inputMoney").value = "";
+                }
+        
                 function checkValid(txt)
                 {
                     
@@ -108,8 +117,7 @@ and open the template in the editor.
                     else
                     {
                         return false;
-                    }
-                    
+                    }                    
                 }
     
                 function play()
@@ -118,35 +126,32 @@ and open the template in the editor.
                     var val = parseInt(text);
                     
                     var value1 = 
-                        parseInt(document.getElementById("wallet1").innerHTML);
-                    
-                    if(!isNaN(val) && text.length === 3)
+                        parseInt(document.getElementById("wallet1").innerHTML);                   
+                    if(text.string != 3)
+                        for(var i = text.length; i < 3; i++)
+                            text = text + "0";
+                    document.getElementById("inputMoney").value = text;
+                    if(value1 !== 0)
                     {    
-                        if(checkValid(text) === true && value1 !== 0)
+                        if(checkValid(text) === true)
                         {                           
                             document.getElementById("output").innerHTML = 
                             "You Won $200";
                             var total = value1 + 249;
-                            document.getElementById("wallet1").innerHTML = total;
+                            document.getElementById("wallet1").innerHTML =total;
                         }
-                        else if(checkValid(text) === false && value1 !== 0)
+                        else if(checkValid(text) === false)
                         {
                             document.getElementById("output").innerHTML = 
                             "You Lost $1";
                             var total = value1 - 1;
-                            document.getElementById("wallet1").innerHTML = total;
-                        }
-                        else
-                        {
-                            document.getElementById("output").innerHTML = 
-                            "NO More Money Sorry";
+                            document.getElementById("wallet1").innerHTML =total;
                         }
                     }
-                    
                     else
                     {
                         document.getElementById("output").innerHTML = 
-                            "Not a number or Not Three Numbers";
+                            "NO More Money Sorry";
                     }
                         
 
@@ -179,8 +184,8 @@ and open the template in the editor.
                         A dollar to Play! 
                     </div>                                      
                 </div>
-                <input class='input1' id='inputMoney' type='text' 
-                       maxlength='3'/> 
+                <input oninput="onCall()" class='input1' id='inputMoney' 
+                       type='text' maxlength='3'/> 
                 <span class='input1' style='color:white'>
                     Please Type in a three digit integer</span>
                 <br>
